@@ -1,1 +1,24 @@
-<p>pagina2 works!</p>
+<h2>Inserisci Nuovo Studente</h2>
+
+<div>
+  <label>Nome:</label>
+  <input [(ngModel)]="nuovoStudente.nome" type="text">
+
+  <label>Classe:</label>
+  <input [(ngModel)]="nuovoStudente.classe" type="text">
+
+  <label>Media Voti:</label>
+  <input [(ngModel)]="nuovoStudente.mediaVoti" type="number" step="0.1">
+
+  <button (click)="aggiungiStudente()">Aggiungi Studente</button>
+</div>
+
+<hr>
+
+<h3>Lista Studenti Inseriti</h3>
+
+<ul>
+  <li *ngFor="let s of studenti">
+    ID: {{ s.id }} - {{ s.nome }} ({{ s.classe }}) → Media: {{ s.mediaVoti }}
+  </li>
+</ul>

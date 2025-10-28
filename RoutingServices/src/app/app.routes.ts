@@ -9,3 +9,15 @@ export const routes: Routes = [
 { path: 'pagina1', component: Pagina1 },
 { path: 'pagina2', component: Pagina2 },]
 //SINTASSI
+export const routes: Routes = [
+//se l’URL è vuoto, vai su /pagina1
+{ path: '', redirectTo: 'pagina1', pathMatch: 'full' },
+//se l'URL è /pagina1 mostra il componente Pagina1
+{ path: 'pagina1', component: Pagina1 },
+{ path: 'pagina2', component: Pagina2 },
+{ path: 'pagina3', component: Pagina3 },
+//rotta parametrica
+{ path: 'pagina3/:id', component: DettaglioStudente },
+//SINTASSI
+//{ path: 'url/:parametro', component: Componente},
+];

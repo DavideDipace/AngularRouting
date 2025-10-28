@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // 👈 serve per *ngIf
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { Pagina3Component } from './pagina3/pagina3';
 import { Pagina1 } from './pagina1/pagina1';
 import { Pagina2 } from './pagina2/pagina2';
@@ -18,4 +18,11 @@ export class AppComponent {
   mostraPagina3Handler() { // 👈 questa mancava!
     this.mostraPagina3 = !this.mostraPagina3;
   }
+  // Metodo per navigare quando clicchi i bottoni
+constructor(private router: Router) {} // <--- qui
+
+  vaiA(pagina: string) {
+    this.router.navigate([pagina]);
+  }
+
 }

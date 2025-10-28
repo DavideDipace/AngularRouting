@@ -1,12 +1,5 @@
-<p>ciao appcomponent</p>
-<button routerLink="/pagina1">Vai a Pagina 1</button>
-<button routerLink="/pagina2">Vai a Pagina 2</button>
-<button (click)="mostraPagina3Handler()">
-  Pagina3
-</button>
+<button (click)="vaiA('pagina1')">Pagina 1</button>
+<button (click)="vaiA('pagina2')">Pagina 2</button>
+<button (click)="vaiA('pagina3')">Pagina 3</button>
 
-<!-- Mostra Pagina3 solo se "mostraPagina3" è true -->
-<div *ngIf="mostraPagina3">
-  <app-pagina3></app-pagina3>
-</div>
 <router-outlet></router-outlet>

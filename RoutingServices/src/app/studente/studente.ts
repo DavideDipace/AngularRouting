@@ -8,4 +8,12 @@ import { Component, Input } from '@angular/core';
 export class StudenteComponent {
   @Input() nome: string = '';
   @Input() classe: string = '';
+  @Input() mediaVoti!: number;
+
+mostraMedia: boolean = false;
+
+onMostraMedia() {
+  this.mostraMedia = !this.mostraMedia;
+}
+
 }

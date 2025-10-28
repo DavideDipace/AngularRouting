@@ -2,3 +2,20 @@
   <p><strong>Nome:</strong> {{ nome }}</p>
   <p><strong>Classe:</strong> {{ classe }}</p>
 </div>
+<p>{{ nome }} - Classe: {{ classe }}</p>
+
+<button (click)="onMostraMedia()">
+  {{ mostraMedia ? 'Nascondi' : 'Mostra' }} media voti
+</button>
+
+<div *ngIf="mostraMedia">
+  📘 Media voti: {{ mediaVoti }}
+</div>
+
+<hr>
+
+<div style="border:2px dashed #1e90ff; padding:12px; margin:12px 0;">
+<h3>Nome: {{studente.nome}}</h3>
+<p>Classe: {{studente.classe}}</p>
+<a [routerLink]="['/pagina3', studente.id]">Mostra dettagli</a>
+</div>
